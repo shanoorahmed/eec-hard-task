@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+Home
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for post in posts %}
+            <a href="{{ url_for('viewpost', post_id=post.id) }}">
+                <h2>{{ post.title }}</h2>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

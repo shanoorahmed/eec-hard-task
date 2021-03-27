@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+Post
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+            {{ post.title }}
+        </h1>
+        <br>
+        <p>
+            {{ post.post }}
+        </p>
+    </div>
+{% endblock %}
